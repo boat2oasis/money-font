@@ -1,0 +1,18 @@
+  <mat-form-field appearance="fill"  class="input-example">
+      <mat-toolbar>
+        <input matInput [value]="selectedFileNames.length ? selectedFileNames : '上传图标'" />
+      </mat-toolbar>
+  
+      <input
+        type="file"
+        id="fileInput"
+        name="fileInput"
+        accept="image/*" 
+        (change)="selectFiles($event)"
+      />
+  </mat-form-field>
+
+  <div>
+    <img *ngFor='let preview of previews' [src]="preview" class="preview">
+  </div>
+  

@@ -1,0 +1,67 @@
+
+<h2 mat-dialog-title>添加物品</h2>
+<mat-dialog-content class="mat-typography">
+    
+  <div class="col-lg-24">
+    <form [formGroup]="userForm" class="responsiveDialog">
+    <mat-form-field class="input-example">
+      <mat-label>物品名称</mat-label>
+      <input  required matInput id="name" formControlName="name" autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>物品价格</mat-label>
+      <input  type="number" required id="price" formControlName="price" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+        <mat-label>购买日期</mat-label>
+        <input required  matInput [matDatepicker]="picker" id="purchaseDate" formControlName="purchaseDate">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>是否携带</mat-label>
+      <mat-select required  formControlName="isCarried">
+          <mat-option *ngFor="let deFaultAccount of deFaultAccountList"  [value]="deFaultAccount.value">
+            {{deFaultAccount.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+        <mat-label>存放位置</mat-label>
+        <input  required id="storageLocation" formControlName="storageLocation" matInput>
+    </mat-form-field>
+
+    <div class="example-ripple-container mat-elevation-z4"
+        matRipple
+        [matRippleCentered]="centered"
+        [matRippleDisabled]="disabled"
+        [matRippleUnbounded]="unbounded">
+        <img *ngIf="uploaded" [src]="imagebase64" class="preview" 
+        style="width: 200px;height: 200px;">
+        <button *ngIf="uploaded" class="delete-btn" (click)="removeImage()">
+          <nb-icon icon="close-outline"></nb-icon>
+        </button>
+      <input
+            type="file"
+            id="fileInput"
+            name="fileInput"
+            accept="image/*" 
+            (change)="selectFiles($event)"
+            style="display: none;"
+          />
+          <label  for="fileInput" class="custom-file-upload">
+            上传物品图片
+          </label>
+      </div>
+
+    </form>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close status="primary">Cancel</button>
+  <button mat-button  status="primary" (click)="addData()">Submit</button>
+</mat-dialog-actions>

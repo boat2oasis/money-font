@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card class="inline-form-card">
+        <nb-card-body>
+            <button nbButton (click)="addData()" matRipple status="primary" >添加消费数据</button>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+  <nb-card>
+    <nb-card-body>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 fixed-table">
+
+        <ng-container matColumnDef="spentDate" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef >消费时间</th>
+          <td mat-cell *matCellDef="let element; let i = index" (click)="expendData(i)"> 
+            <nb-icon *ngIf="element.type===0 && element.expend===0" icon="arrow-ios-forward-outline"></nb-icon>
+            <nb-icon *ngIf="element.type===0 && element.expend===1" icon="arrow-ios-downward-outline"></nb-icon>
+            <span style="margin-left: 30px;" *ngIf="element.type===1"></span>
+            {{element.spentDate}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="productServiceName" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef >消费/服务名称</th>
+          <td mat-cell *matCellDef="let element"> {{element.productServiceName}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="price" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 单价 </th>
+          <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="quantity" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 数量 </th>
+          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="pricees" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 总价 </th>
+          <td mat-cell *matCellDef="let element"> {{element.pricees}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="categoryName" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 分类名称 </th>
+          <td mat-cell *matCellDef="let element"> {{element.categoryName}} </td>
+        </ng-container>
+
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="usedForName" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 消费用途 </th>
+          <td mat-cell *matCellDef="let element"> {{element.usedForName}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="accountName" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 扣款账户 </th>
+          <td mat-cell *matCellDef="let element"> {{element.accountName}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="necessaryName" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef > 是否必要 </th>
+          <td mat-cell *matCellDef="let element"> {{element.necessaryName}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="couldSave" style="width: 100px;" >
+          <th mat-header-cell *matHeaderCellDef  >可以节省</th>
+          <td mat-cell *matCellDef="let element"> {{element.couldSave}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="operation" style="width: 100px;">
+          <th mat-header-cell *matHeaderCellDef >操作</th>
+          <td mat-cell *matCellDef="let element">
+            <button matRipple status="primary" *ngIf="element.operation === 1" (click)="deletData(element.id)" nbButton>删除数据</button>
+          </td>
+        </ng-container>
+
+
+<!--
+        <ng-container *ngIf="row.data.operation === 1; else noOperation">
+          <button matRipple status="primary" *ngIf="row.data.operation === 1" (click)="deletData(row.data.id)" nbButton>删除数据</button>
+        </ng-container>
+        <ng-template #noOperation>-</ng-template>
+-->
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </nb-card-body>
+  </nb-card>
+  

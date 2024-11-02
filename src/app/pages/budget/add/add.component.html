@@ -1,0 +1,29 @@
+
+<h2 mat-dialog-title>添加预算</h2>
+<mat-dialog-content class="mat-typography">
+
+  <div class="col-lg-24">
+    <form [formGroup]="userForm" class="responsiveDialog">
+
+    <mat-form-field appearance="fill" class="input-example">
+        <mat-label>选择时间段</mat-label>
+        <mat-date-range-input required [rangePicker]="picker">
+            <input required id="dateFrom" formControlName="dateFrom" matStartDate placeholder="Start date">
+            <input required id="dateTo" formControlName="dateTo"  matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+        <mat-label>预算金额</mat-label>
+        <input id="amount" type="number" formControlName="amount" matInput>
+      </mat-form-field>
+    </form>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close status="primary">Cancel</button>
+  <button mat-button  status="primary" (click)="addData()">Submit</button>
+</mat-dialog-actions>

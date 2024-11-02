@@ -1,0 +1,47 @@
+.login-container {
+  width: 100%;
+  display: flex;
+  padding-top: 140px;
+  justify-content: center; // 或其他对齐方式
+}
+.title{
+  width: 100%;
+  justify-content: center; 
+  padding-bottom: 20px;
+  padding-top: 30px;
+  display: flex;
+
+  width: 200px; /* 设置宽度 */
+  margin: 0 auto;
+}
+mat-card {
+  width: 600px;
+}
+
+.full-width {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+  .mat-mdc-unelevated-button.mat-primary {
+    --mdc-filled-button-container-color: #6200ee;
+    --mdc-filled-button-label-text-color: #fff;
+    height: 44px;
+}
+
+.mdc-button .mdc-button__label {
+  position: relative;
+  font-size: 20px;
+}
+
+
+.mat-body, .mat-body-2, .mat-typography .mat-body, .mat-typography .mat-body-2, .mat-typography {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: .0178571429em;
+  background-color: #EEECE6;
+}

@@ -1,0 +1,13 @@
+mat-form-field {
+  margin-right: 12px;
+}
+
+::ng-deep snack-bar-container.custom-snackbar {
+    background-color: #ff4081 !important; /* 自定义背景颜色 */
+    color: #ffffff !important;            /* 自定义文字颜色 */
+  }
+  ::ng-deep snack-bar-container.nb-theme-material-light .mat-mdc-snack-bar-container {
+    --mat-mdc-snack-bar-button-color: #e91e63;
+    --mdc-snackbar-container-color: #e91e63;
+    --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}

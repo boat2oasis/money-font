@@ -1,0 +1,77 @@
+
+<h2 mat-dialog-title>添加消费数据</h2>
+<mat-dialog-content class="mat-typography">
+
+  <div class="col-lg-24">
+    <form [formGroup]="userForm" class="responsiveDialog">
+    <mat-form-field class="input-example">
+      <mat-label>商品/服务名称</mat-label>
+      <input  required matInput id="productServiceName" formControlName="productServiceName" autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>商品价格</mat-label>
+      <input type="number" required id="price" formControlName="price" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>商品数量</mat-label>
+      <input  type="number" required id="quantity" formControlName="quantity" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>商品总价</mat-label>
+      <input type="number" required  id="pricees" formControlName="pricees" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>商品用途</mat-label>
+      <mat-select required formControlName="usedFor">
+          <mat-option *ngFor="let food of usedFor" [value]="food.value">{{food.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>商品分类</mat-label>
+      <mat-select required  formControlName="category">
+          <mat-option *ngFor="let food of category"  [value]="food.value">
+            {{food.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>消费账户</mat-label>
+      <mat-select required formControlName="accountId">
+          <mat-option *ngFor="let food of accountList"  [value]="food.value">
+            {{food.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>消费日期</mat-label>
+      <input required matInput [matDatepicker]="picker" id="spentDate" formControlName="spentDate">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker  ></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>必要程度</mat-label>
+      <mat-select required  formControlName="necessary">
+          <mat-option *ngFor="let food of necessary"  [value]="food.value">
+            {{food.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-example">
+      <mat-label>本可节省</mat-label>
+      <input type="number" required id="couldSave" formControlName="couldSave" matInput>
+    </mat-form-field>
+   
+    </form>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close status="primary">Cancel</button>
+  <button mat-button status="primary" (click)="addData()">Submit</button>
+</mat-dialog-actions>

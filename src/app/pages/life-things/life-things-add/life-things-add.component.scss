@@ -1,0 +1,93 @@
+:host {
+    display: block;
+  }
+  
+  .input-example {
+    display: block;
+    margin-top: 1rem;
+  }
+  .container {
+    width: 420px;
+    margin: 20px auto;
+  }
+  
+  .container h3 {
+    font-size: xx-large;
+  }
+  
+  .container h4 {
+    font-size: x-large;
+  }
+  
+    @media (min-width: 768px) {
+  
+    
+      .responsiveDialog{
+        min-width: 600px;
+      }
+    }
+  
+  .ngx-upload-images {
+      width: 100%;
+  }
+    
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .example-card {
+    display: grid;
+    place-items: center; /* 同时水平和垂直居中 */
+    width: 200px;
+    height: 200px;
+  }
+  .example-ripple-container {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    
+    position: relative;
+    display: inline-block;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /** Styles to make the demo look better. */
+  .example-ripple-checkbox {
+    margin: 6px 12px 6px 0;
+  }
+  
+  .example-ripple-form-field {
+    margin: 0 12px 0 0;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
