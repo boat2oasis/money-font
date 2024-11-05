@@ -28,8 +28,8 @@ export class LoginComponent {
         (response) => {
           debugger
           console.log(response); // Log the response data to the console
-          localStorage.removeItem('Authorization'); // 替换为你的 cookie 名称
-          localStorage.setItem('Authorization',"Bearer "+response.data); // 替换为你的 cookie 名称
+          this.cookieService.delete('Authorization'); // 替换为你的 cookie 名称
+          this.cookieService.set('Authorization',"Bearer "+response.data.accessToken); // 替换为你的 cookie 名称
           this.router.navigate(['/page']);
         },
         (error) => {

@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
-  private postDatas = environment.apiUrl+"/users/login";
+  private postDatas = environment.apiUrl+"/user/login";
   constructor(private http: HttpClient) { }
   // Method to fetch data from the API
   postData(data:any): Observable<any> {

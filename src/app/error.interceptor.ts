@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
-
+import { tap, catchError } from 'rxjs/operators';
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
   constructor(private router: Router) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
+      tap((event: HttpEvent<any>) => {
+          if (event instanceof HttpResponse) {
+              // 这里可以处理所有成功的响应
+              console.log('成功响应拦截:', event);
+          }
+      }),
       catchError((error: HttpErrorResponse) => {
         debugger
         if (error.status === 403) {
