@@ -6,7 +6,7 @@ table {
 .mat-column-productServiceName {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 160px;
+    width: 220px;
     min-width: 95px;
     
   }
@@ -14,36 +14,23 @@ table {
   .mat-column-spentDate {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 160px;
+    width: 220px;
     min-width: 136px;
   }
 
-  .mat-column-price {
 
-    /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
-    min-width: 61px;
-  }
-
-
-  .mat-column-quantity {
-
-    /* or this if you want the column to auto-adjust to the width of the table */
-    width: 88px;
-    min-width: 61px;
-  }
 
   .mat-column-pricees {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
+    width: 172px;
     min-width: 61px;
   }
 
   .mat-column-categoryName {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
+    width: 172px;
     min-width: 61px;
   }
 
@@ -51,34 +38,28 @@ table {
   .mat-column-usedForName {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
+    width: 172px;
     min-width: 61px;
   }
 
   .mat-column-accountName {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
+    width: 172px;
     min-width: 61px;
   }
 
   
-  .mat-column-necessaryName {
-
-    /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
-    min-width: 61px;
-  }
-
+  
   
   .mat-column-couldSave {
 
     /* or this if you want the column to auto-adjust to the width of the table */
-    width: 112px;
+    width: 172px;
     min-width: 61px;
   }
 
    
   .mat-column-operation {
-    min-width: 61px;
+    min-width: 82px;
   }

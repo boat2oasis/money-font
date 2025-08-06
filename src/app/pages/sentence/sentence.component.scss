@@ -1,0 +1,68 @@
+.example-form-field {
+  width: 100%;
+  //position: fixed;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.custom-rounded-form-field {
+  width: 100%;
+  border-radius: 12px !important; 
+}
+.mat-mdc-card-header {
+  display: block;
+}
+
+.mat-mdc-header-row {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: var(--mat-table-header-container-height, 56px);
+  color: var(--mat-table-header-headline-color, rgba(0, 0, 0, 0.87));
+  font-family: var(--mat-table-header-headline-font, Roboto, sans-serif);
+  line-height: var(--mat-table-header-headline-line-height);
+  font-size: var(--mat-table-header-headline-size, 14px);
+  font-weight: var(--mat-table-header-headline-weight, 500);
+  background-color: rgb(64, 158, 255) !important;
+  color: white;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.example-card {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.example-card-footer {
+  padding: 16px;
+}
+
+::ng-deep .nb-theme-material-light .mdc-data-table__header-cell {
+  color: white !important;
+}
+

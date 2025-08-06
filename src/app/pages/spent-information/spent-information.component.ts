@@ -3,8 +3,11 @@ import { SpentInformationService } from './spent-information.service';
 import { ChangeDetectorRef } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ChangeDetectionStrategy} from '@angular/core';
+
 import { SpentInformationAddComponentComponent } from './spent-information-add.component/spent-information-add.component.component';
+
 import { AccountDataService } from '../account/account.data.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 import {MessageSuccessComponent} from '../components/message/message.success.component'
 
@@ -31,8 +34,8 @@ export class SpentInformationComponent {
   displayedColumns: string[] = 
    [
   'spentDate',
-  'productServiceName','price','quantity','pricees','categoryName',
-  'usedForName','accountName','necessaryName','couldSave','operation'
+  'productServiceName','pricees',
+  'usedForName','accountName','couldSave','operation'
   ];
 
 
@@ -52,13 +55,13 @@ export class SpentInformationComponent {
 
 
     addData() {
-      debugger
+      
       console.log("Always Love");
       const dialogRef = this.dialog.open(SpentInformationAddComponentComponent, {
         disableClose: true, // 禁止点击背景和按下 ESC 键关闭
       });
       dialogRef.afterClosed().subscribe(result => {
-        debugger
+        
         console.log(result);
       });
     }
@@ -83,14 +86,14 @@ export class SpentInformationComponent {
           this.selectData()
         },
         (error) => {
-          debugger
+          
         },
       ) 
     }
    
 
     expendData(index:number){
-      debugger
+      
             if(this.dataSource[index].expend===0 && this.dataSource[index].type===0){
               this.dataSource.splice(index + 1, 0, ...this.dataSource[index].children);
       
@@ -109,14 +112,14 @@ export class SpentInformationComponent {
     selectData(){
       this.spentInformationService.selectData().subscribe(
         (response) => {
-          debugger
+          
           this.dataSource = response.data;
 
           this.cdr.detectChanges();
           console.log(this.dataSource);
         },
         (error) => {
-          debugger
+          
           console.log(error);
         },
       )

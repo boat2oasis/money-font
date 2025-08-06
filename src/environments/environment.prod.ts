@@ -5,5 +5,6 @@
  */
 export const environment = {
   production: true,
-  apiUrl: 'http://114.132.201.185:8080',
+  //apiUrl: 'http://127.0.0.1:8080',
+  apiUrl: 'https://coca-word.online/api',
 };

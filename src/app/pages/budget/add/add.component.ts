@@ -39,7 +39,7 @@ export class AddComponent implements OnInit{
           this.dialogRef.close(this.userForm.value);
         },
         (error) => {
-          debugger
+          
           console.error('Error fetching data:', error); // Log any errors
         }
       );

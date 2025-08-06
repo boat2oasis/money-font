@@ -16,7 +16,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           }
       }),
       catchError((error: HttpErrorResponse) => {
-        debugger
+        
         if (error.status === 403) {
           // 处理 403 错误，重定向到登录页面
           this.router.navigate(['/login']);

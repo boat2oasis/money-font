@@ -10,7 +10,6 @@ import { ChartsRoutingModule, routedComponents } from './charts-routing.module';
 import { ChartjsBarComponent } from './chartjs/chartjs-bar.component';
 import { ChartjsLineComponent } from './chartjs/chartjs-line.component';
 import { ChartjsUsedForPieComponent } from './chartjs/chartjs-used-for-pie.component';
-import { ChartjsCategoryPieComponent } from './chartjs/chartjs-category-pie.component';
 import { ChartjsMultipleXaxisComponent } from './chartjs/chartjs-multiple-xaxis.component';
 import { ChartjsBarHorizontalComponent } from './chartjs/chartjs-bar-horizontal.component';
 import { ChartjsRadarComponent } from './chartjs/chartjs-radar.component';
@@ -63,8 +62,6 @@ const components = [
   EchartsAreaStackComponent,
   EchartsBarAnimationComponent,
   EchartsRadarComponent,
-  ChartjsCategoryPieComponent,
-
 ];
 
 @NgModule({

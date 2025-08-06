@@ -17,11 +17,11 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
 
       chartsService.getPriceByDayVo().subscribe(
         (response) => {
-          debugger
+          
           let datas = response.data
 
 
-      debugger
+      
       const colors: any = config.variables;
       const chartjs: any = config.variables.chartjs;
 
@@ -64,7 +64,7 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
         }
         ,
         {
-          label: '非必要消费',
+          label: '本可以节省',
           data: datas.map((item) => {
             return item.couldSave; 
         }),
@@ -140,7 +140,7 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
 
         },
         (error) => {
-          debugger
+          
           console.error('Error fetching data:', error); // Log any errors
         }
       )

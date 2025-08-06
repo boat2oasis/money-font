@@ -40,7 +40,7 @@ export class TreeTableComponent {
   constructor(private cdr: ChangeDetectorRef,private ngZone: NgZone) {}
 dataSource = ELEMENT_DATA;
   expendData(index:number){
-debugger
+
       if(this.dataSource[index].expend===0 && this.dataSource[index].type===0){
         this.dataSource.splice(index + 1, 0, ...this.dataSource[index].children);
 

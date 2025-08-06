@@ -1,0 +1,65 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header class="example-header">
+    <div class="row">
+      <div class="col-md-12">
+          <mat-form-field  class="custom-rounded-form-field">
+            <input matInput type="text"  placeholder="Search"  (keydown)="onKeyDown($event)"  [(ngModel)]="value">
+            <button *ngIf="value"  matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+      </div>
+    </div>
+</mat-card-header>
+  
+
+<mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="series">
+        <th mat-header-cell *matHeaderCellDef> 剧集 </th>
+        <td mat-cell *matCellDef="let element"> {{element.series}} </td>
+      </ng-container>
+
+   
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="sentence">
+        <th mat-header-cell *matHeaderCellDef>句子</th>
+        <td mat-cell *matCellDef="let element">
+
+          <span [innerHTML]="highlightText(element.sentence)"></span>
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="chinese">
+        <th mat-header-cell *matHeaderCellDef>中文</th>
+        <td mat-cell *matCellDef="let element"> 
+          <span [innerHTML]="highlightText(element.chinese)"></span>
+        </td>
+      </ng-container>
+      
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator
+        class="demo-paginator"
+        (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [disabled]="disabled"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+        [hidePageSize]="hidePageSize"
+        [pageIndex]="pageIndex"
+        aria-label="Select page">
+    </mat-paginator>
+
+  </mat-card-content>
+</mat-card>
+    

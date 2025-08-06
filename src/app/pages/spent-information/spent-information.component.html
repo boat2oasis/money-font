@@ -26,18 +26,6 @@
           <th mat-header-cell *matHeaderCellDef >消费/服务名称</th>
           <td mat-cell *matCellDef="let element"> {{element.productServiceName}} </td>
         </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="price" style="width: 100px;">
-          <th mat-header-cell *matHeaderCellDef > 单价 </th>
-          <td mat-cell *matCellDef="let element"> {{element.price}} </td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="quantity" style="width: 100px;">
-          <th mat-header-cell *matHeaderCellDef > 数量 </th>
-          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
-        </ng-container>
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="pricees" style="width: 100px;">
@@ -45,11 +33,7 @@
           <td mat-cell *matCellDef="let element"> {{element.pricees}} </td>
         </ng-container>
 
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="categoryName" style="width: 100px;">
-          <th mat-header-cell *matHeaderCellDef > 分类名称 </th>
-          <td mat-cell *matCellDef="let element"> {{element.categoryName}} </td>
-        </ng-container>
+  
 
 
         <!-- Symbol Column -->
@@ -64,11 +48,6 @@
           <td mat-cell *matCellDef="let element"> {{element.accountName}} </td>
         </ng-container>
 
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="necessaryName" style="width: 100px;">
-          <th mat-header-cell *matHeaderCellDef > 是否必要 </th>
-          <td mat-cell *matCellDef="let element"> {{element.necessaryName}} </td>
-        </ng-container>
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="couldSave" style="width: 100px;" >

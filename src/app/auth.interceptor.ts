@@ -6,7 +6,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AuthInterceptor implements HttpInterceptor {
   constructor(private cookieService: CookieService) {}
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    debugger
+    
     const authToken = this.cookieService.get('Authorization'); // 替换为你的 cookie 名称
     // 如果 cookie 存在，将它添加到请求头中
     if (authToken) {

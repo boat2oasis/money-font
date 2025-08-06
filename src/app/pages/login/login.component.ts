@@ -26,14 +26,14 @@ export class LoginComponent {
       }
       this.loginService.postData(usr).subscribe(
         (response) => {
-          debugger
+          
           console.log(response); // Log the response data to the console
           this.cookieService.delete('Authorization'); // 替换为你的 cookie 名称
           this.cookieService.set('Authorization',"Bearer "+response.data.accessToken); // 替换为你的 cookie 名称
           this.router.navigate(['/page']);
         },
         (error) => {
-          debugger
+          
           console.error('Error fetching data:', error); // Log any errors
         }
       );

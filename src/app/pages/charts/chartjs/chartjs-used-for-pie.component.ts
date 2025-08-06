@@ -17,7 +17,7 @@ export class ChartjsUsedForPieComponent implements OnDestroy {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       chartsService.getPriceByUsedForVo().subscribe(
         (response) => {
-          debugger
+          
           let data = response.data
 
 
@@ -38,7 +38,12 @@ export class ChartjsUsedForPieComponent implements OnDestroy {
                 return item.pricees; 
             }),
             //  backgroundColor: Array.from({ length: labelsLenght.length }, () => `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`),
-             backgroundColor:  [colors.primaryLight, colors.infoLight, colors.successLight,'#FFDD54','#FF6384'],
+             
+            
+            backgroundColor:  [colors.primaryLight, colors.infoLight, colors.successLight,'#FFDD54','#FF6384','#9966FF','#2b96cc'],
+             //backgroundColor:  ["#4298f5","#4251f5","#7e42f5",'#da42f5','#f54e42','#c542f5'],
+
+            
 
             }],
           };
@@ -69,7 +74,7 @@ export class ChartjsUsedForPieComponent implements OnDestroy {
 
         },
         (error) => {
-          debugger
+          
           console.error('Error fetching data:', error); // Log any errors
         }
       )

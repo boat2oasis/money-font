@@ -26,5 +26,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: '物品管理',
     icon: 'pie-chart-outline',
     link: '/pages/liftThings',
+  } ,
+  {
+    title: '美剧句子',
+    icon: 'pie-chart-outline',
+    link: '/pages/sentence',
+  } ,
+  {
+    title: '词频',
+    icon: 'pie-chart-outline',
+    link: '/pages/frequency',
   }
 ];

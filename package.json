@@ -16,7 +16,7 @@
     "ng": "ng",
     "conventional-changelog": "conventional-changelog",
     "build": "ng build",
-    "start": "electron-forge start",
+    "start": "ng serve",
     "build:prod": "npm run build -- --configuration production --aot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:coverage": "rimraf coverage && npm run test -- --code-coverage",

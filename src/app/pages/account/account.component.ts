@@ -39,25 +39,25 @@ export class AccountComponent implements OnInit{
   selectData(){
     this.accountDataService.selectData().subscribe(
       (response) => {
-        debugger
+        
         this.dataSource = response.data;
         this.cdr.detectChanges();
         console.log(this.dataSource);
       },
       (error) => {
-        debugger
+        
         console.log(error);
       },
     )
   }
   addData() {
-    debugger
+    
     console.log("Always Love");
     const dialogRef = this.dialog.open(AccountAddComponent,{
         disableClose: true, // 禁止点击背景和按下 ESC 键关闭
       });
     dialogRef.afterClosed().subscribe(result => {
-      debugger
+      
       console.log(result);
     });
   }

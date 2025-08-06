@@ -25,7 +25,7 @@ export class UploadImagesComponent implements OnInit {
   }
 
   selectFiles(event: any): void {
-    debugger
+    
     this.message = [];
     this.progressInfos = [];
     this.selectedFileNames = [];
@@ -36,7 +36,7 @@ export class UploadImagesComponent implements OnInit {
       const numberOfFiles = this.selectedFiles.length;
       for (let i = 0; i < numberOfFiles; i++) {
         const reader = new FileReader();
-debugger
+
         reader.onload = (e: any) => {
          // console.log(e.target.result);
           this.previews.push(e.target.result);

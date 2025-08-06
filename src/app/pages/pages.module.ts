@@ -13,6 +13,8 @@ import {
   } from '@nebular/theme';
 import { LoginModule } from './login/login.module';
 import { LifeThingsModule } from './life-things/life-things.module';
+import { SentenceModule } from './sentence/sentence.module';
+import { FrequencyModule } from './frequency/frequency.module';
 
   const materialModules = [
       NbCardModule,NbButtonModule,
@@ -29,6 +31,8 @@ import { LifeThingsModule } from './life-things/life-things.module';
     TreetableModule,
     LoginModule,
     LifeThingsModule,
+    SentenceModule,
+    FrequencyModule,
     ...materialModules
   ],
   declarations: [

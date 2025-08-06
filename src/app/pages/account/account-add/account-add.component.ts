@@ -59,13 +59,13 @@ export class AccountAddComponent implements OnInit{
 
         this.accountDataService.postData(this.user).subscribe(
           (response) => {
-            debugger
+            
             console.log(response); // Log the response data to the console
             
              this.dialogRef.close(this.userForm.value);
           },
           (error) => {
-            debugger
+            
             console.error('Error fetching data:', error); // Log any errors
           }
         );
@@ -101,7 +101,7 @@ export class AccountAddComponent implements OnInit{
     
       selectFiles(event: any): void {
      
-        debugger
+        
         const input = event.target as HTMLInputElement;
     
         if (input.files && input.files[0]) {
