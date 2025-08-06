@@ -9,8 +9,6 @@ import { BudgetComponent } from './budget/budget.component'
 import { ChartjsComponent } from './charts/chartjs/chartjs.component'
 import { TreeTableComponent } from './treetable/treetable.component'
 import { LifeThingsComponent } from './life-things/life-things.component'
-import { SentenceComponent } from './sentence/sentence.component';
-import { FrequencyComponent } from './frequency/frequency.component'
 
 const routes: Routes = [{
   path: '',
@@ -44,15 +42,6 @@ const routes: Routes = [{
       path: 'liftThings',
       component: LifeThingsComponent,
     },
-    {
-      path: 'sentence',
-      component: SentenceComponent,
-    },
-    {
-      path: 'frequency',
-      component: FrequencyComponent,
-    },
-    
     {
       path: 'charts',
       loadChildren: () => import('./charts/charts.module')
